@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FrameCraft | Curated Photography Archive & Gallery</title>
+  <meta name="description" content="Explore FrameCraft: A curated visual archive of master photography with 4K UHD resolutions, real-world EXIF metadata, interactive lightbox, and cinema slideshow.">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="FrameCraft | Curated Photography Archive & Gallery">
+  <meta property="og:description" content="Explore FrameCraft: A curated visual archive of master photography with 4K UHD resolutions, real-world EXIF metadata, interactive lightbox, and cinema slideshow.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Typography: Luxury Display Serif & Clean Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- FrameCraft Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo FrameCraft -->
+      <a href="#" class="brand-logo" id="brand-logo" aria-label="FrameCraft Home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Aperture / Lens Icon -->
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="14.31" y1="8" x2="20.05" y2="17.94"/>
+            <line x1="9.69" y1="8" x2="21.17" y2="8"/>
+            <line x1="7.38" y1="12" x2="13.12" y2="2.06"/>
+            <line x1="9.69" y1="16" x2="3.95" y2="6.06"/>
+            <line x1="14.31" y1="16" x2="2.83" y2="16"/>
+            <line x1="16.62" y1="12" x2="10.88" y2="21.94"/>
+          </svg>
+        </div>
+        <span class="brand-logo-text">Frame<span class="brand-accent">Craft</span></span>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero-section" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="#gallery-section" class="nav-link" data-nav-category="all" id="nav-all">All Works</a></li>
+          <li><a href="#gallery-section" class="nav-link" data-nav-category="nature" id="nav-nature">Nature</a></li>
+          <li><a href="#gallery-section" class="nav-link" data-nav-category="travel" id="nav-travel">Travel</a></li>
+          <li><a href="#gallery-section" class="nav-link" data-nav-category="architecture" id="nav-architecture">Architecture</a></li>
+          <li><a href="#gallery-section" class="nav-link" data-nav-category="people" id="nav-portraits">Portraits</a></li>
+          <li>
+            <a href="#gallery-section" class="nav-link fav-nav-link" data-nav-category="favorites" id="nav-favorites">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <span>Favorites</span>
+              <span class="nav-fav-badge" id="nav-fav-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Clean Header Action Essentials -->
+      <div class="header-actions">
+        <!-- Slideshow trigger button -->
+        <button class="slideshow-quick-btn" id="start-slideshow-btn" title="Play Fullscreen Slideshow (Space)" aria-label="Play Slideshow">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <span class="btn-text-desktop">Slideshow</span>
+        </button>
+
+        <!-- Shortcuts modal trigger button -->
+        <button id="shortcuts-btn" class="icon-action-btn" aria-label="View Keyboard Shortcuts (?)" title="Keyboard Shortcuts (?)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- FrameCraft Photography Hero Section -->
+    <section class="fc-hero-section" id="hero-section">
+      <!-- Ambient Glow Accents -->
+      <div class="hero-glow-orb orb-1" aria-hidden="true"></div>
+      <div class="hero-glow-orb orb-2" aria-hidden="true"></div>
+
+      <div class="fc-hero-container">
+        <!-- Hero Left: Editorial Intro & Quick Search -->
+        <div class="fc-hero-content">
+          <div class="hero-badge-pill">
+            <span class="pulse-dot"></span>
+            <span>Curated Fine Art Photography Archive</span>
+          </div>
+
+          <h1 class="fc-hero-heading">
+            The Fine Art of<br>
+            <span class="heading-gradient">Visual Storytelling</span>
+          </h1>
+
+          <p class="fc-hero-desc">
+            A high-resolution 4K photographic archive capturing evocative landscapes, architectural geometries, and human narratives. Inspected with lossless EXIF parameters, harmonic color palettes, and full cinema viewer.
+          </p>
+
+          <!-- Action & Search Group -->
+          <div class="fc-hero-actions-group">
+            <div class="hero-buttons-row">
+              <a href="#gallery-section" class="fc-btn-primary" id="hero-discover-btn">
+                <span>Explore Gallery</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+
+              <button class="fc-btn-secondary" id="hero-slideshow-trigger" onclick="document.getElementById('start-slideshow-btn').click();">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                <span>Cinema Mode</span>
+              </button>
+            </div>
+
+            <!-- Instant Search Bar -->
+            <div class="fc-hero-search-wrapper">
+              <div class="search-input-group">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input 
+                  type="text" 
+                  id="gallery-search-input" 
+                  class="search-input" 
+                  placeholder="Search photographs by title, location, artist, lens..." 
+                  aria-label="Search gallery images"
+                  autocomplete="off"
+                >
+                <button id="clear-search-btn" class="clear-search-btn" aria-label="Clear search query" hidden>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photographic Archive Stats Bar -->
+          <div class="fc-hero-metrics">
+            <div class="metric-item">
+              <span class="metric-val" id="stat-total-count">20</span>
+              <span class="metric-lbl">Curated Shots</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val">4K UHD</span>
+              <span class="metric-lbl">Lossless Quality</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val">100%</span>
+              <span class="metric-lbl">Raw EXIF Data</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val" id="stat-favorites-count">0</span>
+              <span class="metric-lbl">Saved Favorites</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Dynamic Photographic Masterpiece Showcase -->
+        <div class="fc-hero-showcase" aria-label="Featured Photographic Previews">
+          <div class="showcase-card primary-card" onclick="document.getElementById('gallery-card-1')?.click();" title="Click to inspect Alpine Glaciers">
+            <img 
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80" 
+              alt="Alpine Glaciers & Dawn Light"
+              class="showcase-img"
+            >
+            <div class="showcase-badge-top">
+              <span class="lens-tag">Sony A7R V &bull; 35mm f/2.8</span>
+              <span class="res-tag">4K</span>
+            </div>
+            <div class="showcase-info-bottom">
+              <span class="showcase-location">Zermatt, Swiss Alps</span>
+              <h3 class="showcase-title">Alpine Glaciers &amp; Dawn Light</h3>
+            </div>
+          </div>
+
+          <!-- Secondary Overlapping Showcase Cards -->
+          <div class="showcase-stack">
+            <div class="showcase-card mini-card card-top" onclick="document.getElementById('gallery-card-2')?.click();" title="Click to inspect Kyoto Torii Path">
+              <img 
+                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" 
+                alt="Kyoto Torii Path at Dawn"
+                class="showcase-img"
+              >
+              <div class="showcase-mini-info">
+                <span class="mini-tag">Fujifilm X-T5</span>
+                <span class="mini-title">Kyoto, Japan</span>
+              </div>
+            </div>
+
+            <div class="showcase-card mini-card card-bottom" onclick="document.getElementById('gallery-card-5')?.click();" title="Click to inspect Emerald Lake">
+              <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
+                alt="Emerald Lake & Pine Reflections"
+                class="showcase-img"
+              >
+              <div class="showcase-mini-info">
+                <span class="mini-tag">Nikon Z7 II</span>
+                <span class="mini-title">Banff, Canada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fc-wave-divider" aria-hidden="true">
+        <svg class="hero-curve-svg" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0,160
+               C120,190 210,200 310,185
+               C420,170 520,120 650,108
+               C790,95 885,136 980,140
+               C1080,145 1170,100 1265,82
+               C1330,70 1388,58 1440,42
+               L1440,220 L0,220 Z"
+            fill="#f4f4f5"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Category Filter Ribbon & Gallery Controls -->
+    <section class="controls-section" id="gallery-section">
+      <div class="controls-container">
+        
+        <!-- Primary Category Tabs -->
+        <div class="filter-tabs-wrapper">
+          <div class="filter-tabs" role="tablist" aria-label="Gallery Categories" id="category-filter-list">
+            <button class="filter-btn active" data-category="all" role="tab" aria-selected="true" id="filter-all">
+              <span class="filter-label">All Works</span>
+              <span class="filter-count" id="count-all">20</span>
+            </button>
+            <button class="filter-btn" data-category="nature" role="tab" aria-selected="false" id="filter-nature">
+              <span class="filter-label">Nature</span>
+              <span class="filter-count" id="count-nature">5</span>
+            </button>
+            <button class="filter-btn" data-category="travel" role="tab" aria-selected="false" id="filter-travel">
+              <span class="filter-label">Travel</span>
+              <span class="filter-count" id="count-travel">5</span>
+            </button>
+            <button class="filter-btn" data-category="architecture" role="tab" aria-selected="false" id="filter-architecture">
+              <span class="filter-label">Architecture</span>
+              <span class="filter-count" id="count-architecture">5</span>
+            </button>
+            <button class="filter-btn" data-category="people" role="tab" aria-selected="false" id="filter-people">
+              <span class="filter-label">Portraits</span>
+              <span class="filter-count" id="count-people">5</span>
+            </button>
+            <button class="filter-btn favorites-tab" data-category="favorites" role="tab" aria-selected="false" id="filter-favorites">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <span class="filter-label">Favorites</span>
+              <span class="filter-count fav-count-badge" id="count-favorites">0</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Inline Trending Photographic Tags Strip -->
+        <div class="tags-wrapper" id="tags-wrapper">
+          <span class="tags-label">Tags:</span>
+          <div class="tags-list" id="tags-list">
+            <button class="tag-chip active" data-tag="all">#All</button>
+            <button class="tag-chip" data-tag="mountains">#Mountains</button>
+            <button class="tag-chip" data-tag="sunset">#Sunset</button>
+            <button class="tag-chip" data-tag="minimal">#Minimal</button>
+            <button class="tag-chip" data-tag="urban">#Urban</button>
+            <button class="tag-chip" data-tag="coastal">#Coastal</button>
+            <button class="tag-chip" data-tag="portrait">#Portrait</button>
+            <button class="tag-chip" data-tag="ancient">#Heritage</button>
+          </div>
+        </div>
+
+        <!-- Sort and Layout Options -->
+        <div class="display-controls">
+          <!-- Sort Selector -->
+          <div class="sort-wrapper">
+            <label for="gallery-sort-select" class="sort-label">Sort:</label>
+            <select id="gallery-sort-select" class="sort-select" aria-label="Sort gallery images">
+              <option value="featured">Featured Curations</option>
+              <option value="popular">Most Appreciated</option>
+              <option value="title-asc">Title (A &rarr; Z)</option>
+              <option value="title-desc">Title (Z &rarr; A)</option>
+              <option value="photographer">Photographer</option>
+            </select>
+          </div>
+
+          <!-- View Density Switcher -->
+          <div class="view-switcher" role="group" aria-label="Grid layout density">
+            <button class="view-btn active" data-view="grid" id="view-grid-btn" title="Masonry Grid View (3 Columns)" aria-label="Masonry Grid View">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </button>
+            <button class="view-btn" data-view="editorial" id="view-editorial-btn" title="Editorial Wide View (2 Columns)" aria-label="Editorial Wide View">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="8" rx="1"/>
+                <rect x="3" y="13" width="18" height="8" rx="1"/>
+              </svg>
+            </button>
+            <button class="view-btn" data-view="compact" id="view-compact-btn" title="Dense View (4 Columns)" aria-label="Dense View">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"/>
+                <line x1="8" y1="12" x2="21" y2="12"/>
+                <line x1="8" y1="18" x2="21" y2="18"/>
+                <line x1="3" y1="6" x2="3.01" y2="6"/>
+                <line x1="3" y1="12" x2="3.01" y2="12"/>
+                <line x1="3" y1="18" x2="3.01" y2="18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="gallery-section">
+      <div class="gallery-container">
+        
+        <!-- Live Filter Feedback Bar -->
+        <div class="gallery-status-bar" id="gallery-status-bar">
+          <p class="status-text">
+            <span class="status-indicator"></span>
+            Displaying <strong id="visible-count-display">20</strong> photographs &bull; <span id="current-category-name">All Works</span>
+          </p>
+        </div>
+
+        <!-- Dynamic Image Gallery Grid -->
+        <div class="gallery-grid layout-grid" id="gallery-grid" aria-live="polite">
+          <!-- Dynamically populated via script.js -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-state-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+          </div>
+          <h3 class="empty-state-title">No matching photographs found</h3>
+          <p class="empty-state-desc">We couldn't find any artwork matching your current criteria. Try resetting filters or adjusting search terms.</p>
+          <button class="btn btn-secondary" id="reset-filter-btn">Reset All Filters</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="fc-about-section" aria-labelledby="about-title">
+      <div class="fc-about-container">
+        <div class="fc-about-copy">
+          <div class="section-kicker">About Us</div>
+          <h2 id="about-title">We Craft Moments<br><span>You’ll Cherish Forever</span></h2>
+          <p>
+            FrameCraft is more than just a gallery — it’s a community of passionate creators and dreamers who believe in the power of visual storytelling.
+          </p>
+          <a href="#" class="fc-about-link">Learn More About Us <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="fc-about-features">
+          <article class="about-feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="M8 10h8M8 14h5"></path>
+              </svg>
+            </div>
+            <h3>Curated Collections</h3>
+            <p>Handpicked collections of breathtaking photos across different themes.</p>
+          </article>
+
+          <article class="about-feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-6.1-3.2-6.1 3.2 1.1-6.5L2.6 9.3l6.5-.9L12 2.5z"></path>
+              </svg>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>Experience high-resolution images that bring every detail to life.</p>
+          </article>
+
+          <article class="about-feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11.5a9 9 0 0 1 18 0"></path>
+                <path d="M7 15.5a5 5 0 0 1 10 0"></path>
+                <circle cx="12" cy="8" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3>Join Community</h3>
+            <p>Connect with photographers and share your passion for visual storytelling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curator's Exhibition Spotlight Section -->
+    <section class="fc-spotlight-section" id="spotlight-section">
+      <div class="fc-spotlight-container">
+        
+        <!-- Left: Featured Photograph with Technical Overlay -->
+        <div class="spotlight-visual-card" onclick="document.getElementById('gallery-card-14')?.click();" title="Click to view Positano in Cinema Lightbox">
+          <img 
+            src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=85" 
+            alt="Amalfi Coastal Cliff Village"
+            class="spotlight-hero-img"
+          >
+          <div class="spotlight-badge-curator">
+            <span class="badge-star">&#9733;</span>
+            <span>Curator's Exhibition of the Month</span>
+          </div>
+          <div class="spotlight-tech-strip">
+            <div class="tech-spec-item">
+              <span class="tech-label">CAMERA</span>
+              <strong class="tech-val">Fujifilm X-T5</strong>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-label">LENS</span>
+              <strong class="tech-val">33mm f/1.4 WR</strong>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-label">EXPOSURE</span>
+              <strong class="tech-val">1/500s &bull; f/5.6 &bull; ISO 125</strong>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-label">LOCATION</span>
+              <strong class="tech-val">Positano, Italy</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Curator Story & Editorial Quote -->
+        <div class="spotlight-content">
+          <div class="spotlight-rating" aria-label="5 out of 5 stars">
+            <span class="star filled">&#9733;</span>
+            <span class="star filled">&#9733;</span>
+            <span class="star filled">&#9733;</span>
+            <span class="star filled">&#9733;</span>
+            <span class="star filled">&#9733;</span>
+          </div>
+
+          <span class="spotlight-tag">Curatorial Essay &bull; Issue No. 04</span>
+
+          <blockquote class="spotlight-quote">
+            &ldquo;Photography is the silent craft of freezing ephemeral light into permanent emotion. In FrameCraft, we honor not just the final frame, but the lens craft, the timing of the shutter, and the vision of the human eye behind the glass.&rdquo;
+          </blockquote>
+
+          <div class="spotlight-author">
+            <div class="author-avatar" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="author-name">Elena Rostova &amp; Luca Zanon</h3>
+              <p class="author-title">Master Curators &bull; FrameCraft Editorial Guild</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cinema Lightbox Modal Component -->
+  <div 
+    class="lightbox" 
+    id="lightbox-modal" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-label="Image Lightbox Viewer" 
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+
+    <div class="lightbox-dialog">
+      
+      <!-- Lightbox Header Bar -->
+      <div class="lightbox-header">
+        <div class="lightbox-meta">
+          <span class="lightbox-category-badge" id="lightbox-category">Nature</span>
+          <h2 class="lightbox-title" id="lightbox-title">Alpine Glaciers</h2>
+          <span class="lightbox-resolution-pill" id="lightbox-res">4K UHD</span>
+        </div>
+
+        <div class="lightbox-actions">
+          <span class="lightbox-counter" id="lightbox-counter" aria-live="polite">1 / 20</span>
+          
+          <!-- Favorite button in lightbox -->
+          <button class="lightbox-btn" id="lightbox-fav-btn" aria-label="Toggle Favorite (L)" title="Favorite (L)">
+            <svg class="heart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+
+          <!-- Slideshow toggle button -->
+          <button class="lightbox-btn" id="lightbox-slideshow-btn" aria-label="Toggle Slideshow (Space)" title="Play Slideshow (Space)">
+            <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <svg class="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" hidden>
+              <rect x="6" y="4" width="4" height="16"/>
+              <rect x="14" y="4" width="4" height="16"/>
+            </svg>
+          </button>
+
+          <!-- Toggle EXIF Info Drawer -->
+          <button class="lightbox-btn" id="lightbox-info-btn" aria-label="Toggle Metadata & EXIF Details (I)" title="Image Info (I)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+          </button>
+
+          <!-- Download image button -->
+          <button class="lightbox-btn" id="lightbox-download-btn" aria-label="Download Full Resolution Image" title="Download Image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </button>
+
+          <!-- Share Link button -->
+          <button class="lightbox-btn" id="lightbox-share-btn" aria-label="Share or Copy Link" title="Share Photo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/>
+              <circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </button>
+
+          <!-- Fullscreen toggle -->
+          <button class="lightbox-btn" id="lightbox-fullscreen-btn" aria-label="Toggle Fullscreen (F)" title="Toggle Fullscreen (F)">
+            <svg class="icon-expand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>
+            <svg class="icon-compress" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" hidden>
+              <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+            </svg>
+          </button>
+
+          <!-- Close Modal -->
+          <button class="lightbox-btn close-btn" id="lightbox-close-btn" aria-label="Close Lightbox (Esc)" title="Close (Escape)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slideshow Animated Progress Bar -->
+      <div class="slideshow-progress-bar" id="slideshow-progress-bar">
+        <div class="slideshow-progress-fill" id="slideshow-progress-fill"></div>
+      </div>
+
+      <!-- Lightbox Main Stage & EXIF Drawer Container -->
+      <div class="lightbox-body">
+        
+        <div class="lightbox-stage" id="lightbox-stage">
+          <!-- Previous Navigation Button -->
+          <button class="lightbox-nav-btn prev-btn" id="lightbox-prev-btn" aria-label="Previous image (Left Arrow)" title="Previous image (←)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+
+          <!-- Image Container with Zoom & Pan Layer -->
+          <div class="lightbox-image-container" id="lightbox-image-container">
+            <div class="lightbox-spinner" id="lightbox-spinner" aria-label="Loading image"></div>
+            
+            <div class="lightbox-zoom-viewport" id="lightbox-zoom-viewport">
+              <img 
+                src="" 
+                alt="" 
+                id="lightbox-img" 
+                class="lightbox-img"
+                draggable="false"
+              >
+            </div>
+
+            <!-- Zoom floating control pill -->
+            <div class="zoom-controls" id="zoom-controls">
+              <button id="zoom-out-btn" class="zoom-btn" title="Zoom Out (-)" aria-label="Zoom Out">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <span id="zoom-level-text" class="zoom-level">100%</span>
+              <button id="zoom-in-btn" class="zoom-btn" title="Zoom In (+)" aria-label="Zoom In">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <button id="zoom-reset-btn" class="zoom-btn" title="Reset Zoom (0)" aria-label="Reset Zoom">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Next Navigation Button -->
+          <button class="lightbox-nav-btn next-btn" id="lightbox-next-btn" aria-label="Next image (Right Arrow)" title="Next image (→)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- EXIF & Metadata Slide-In Drawer Panel -->
+        <aside class="lightbox-exif-drawer" id="lightbox-exif-drawer" aria-label="Photo EXIF & Details">
+          <div class="exif-drawer-header">
+            <h3 class="exif-title">Technical Specifications</h3>
+            <button class="exif-close-btn" id="exif-close-btn" aria-label="Close details panel">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+
+          <div class="exif-drawer-content">
+            <!-- Location & Artist -->
+            <div class="exif-block">
+              <span class="exif-label">Location</span>
+              <p class="exif-val bold" id="exif-location">Zermatt, Swiss Alps</p>
+            </div>
+            
+            <div class="exif-block">
+              <span class="exif-label">Photographer</span>
+              <p class="exif-val bold" id="exif-photographer">Luca Zanon</p>
+            </div>
+
+            <div class="exif-divider"></div>
+
+            <!-- Camera Parameters Grid -->
+            <div class="exif-specs-grid">
+              <div class="spec-cell">
+                <span class="spec-label">Camera</span>
+                <strong class="spec-value" id="exif-camera">Sony A7R V</strong>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Lens</span>
+                <strong class="spec-value" id="exif-lens">24-70mm f/2.8 GM</strong>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Aperture</span>
+                <strong class="spec-value" id="exif-aperture">f/2.8</strong>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Shutter</span>
+                <strong class="spec-value" id="exif-shutter">1/1000s</strong>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">ISO</span>
+                <strong class="spec-value" id="exif-iso">100</strong>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Focal Length</span>
+                <strong class="spec-value" id="exif-focal">35mm</strong>
+              </div>
+            </div>
+
+            <div class="exif-divider"></div>
+
+            <!-- Harmonic Color Palette -->
+            <div class="exif-block">
+              <span class="exif-label">Harmonic Color Palette</span>
+              <div class="palette-swatches" id="exif-palette">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="exif-block">
+              <span class="exif-label">Editorial Tags</span>
+              <div class="exif-tags-list" id="exif-tags">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- Lightbox Footer / Details & Thumbnail Strip -->
+      <div class="lightbox-footer">
+        <div class="lightbox-details">
+          <p class="lightbox-location" id="lightbox-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span id="lightbox-location-text">Location details</span>
+          </p>
+          <p class="lightbox-photographer" id="lightbox-photographer">
+            <span>Photograph by</span> <strong id="lightbox-photographer-text">Artist Name</strong>
+          </p>
+        </div>
+
+        <!-- Thumbnail Strip for Quick Navigation -->
+        <div class="lightbox-thumbs-track" id="lightbox-thumbs-track" aria-label="Thumbnail gallery strip">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div class="lightbox-shortcuts-hint">
+          <span><kbd>&larr;</kbd> <kbd>&rarr;</kbd> Navigate</span>
+          <span><kbd>Space</kbd> Slideshow</span>
+          <span><kbd>I</kbd> Info</span>
+          <span><kbd>L</kbd> Favorite</span>
+          <span><kbd>Esc</kbd> Close</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Modal Dialog -->
+  <div class="modal-backdrop" id="shortcuts-modal" role="dialog" aria-modal="true" aria-labelledby="shortcuts-modal-title" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="shortcuts-modal-title">Keyboard Navigation Shortcuts</h3>
+        <button class="modal-close-btn" id="close-shortcuts-btn" aria-label="Close shortcuts dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="shortcuts-grid">
+        <div class="shortcut-row"><span class="shortcut-desc">Next photograph in lightbox</span><kbd>&rarr;</kbd> or <kbd>L</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Previous photograph in lightbox</span><kbd>&larr;</kbd> or <kbd>H</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Close viewer or modal</span><kbd>Esc</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Toggle cinema fullscreen</span><kbd>F</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Toggle slideshow autoplay</span><kbd>Space</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Toggle EXIF specs drawer</span><kbd>I</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Add / Remove Favorite</span><kbd>K</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Zoom in / out</span><kbd>+</kbd> / <kbd>-</kbd></div>
+        <div class="shortcut-row"><span class="shortcut-desc">Show shortcuts helper</span><kbd>?</kbd></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toast Notification System -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scroll-to-Top Floating Button -->
+  <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Scroll back to top" title="Scroll to top">
+    <svg class="arrow-up-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"/>
+      <polyline points="5 12 12 5 19 12"/>
+    </svg>
+  </button>
+
+  <!-- FrameCraft Professional Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand-header">
+            <div class="logo-mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="14.31" y1="8" x2="20.05" y2="17.94"/>
+                <line x1="9.69" y1="8" x2="21.17" y2="8"/>
+                <line x1="7.38" y1="12" x2="13.12" y2="2.06"/>
+                <line x1="9.69" y1="16" x2="3.95" y2="6.06"/>
+                <line x1="14.31" y1="16" x2="2.83" y2="16"/>
+                <line x1="16.62" y1="12" x2="10.88" y2="21.94"/>
+              </svg>
+            </div>
+            <span class="footer-brand-title">Frame<span>Craft</span></span>
+          </div>
+          <p class="footer-desc">
+            FrameCraft is a curated fine art photography archive celebrating visual storytelling, optical mastery, and raw compositional precision.
+          </p>
+        </div>
+
+        <!-- Column 2: Photographic Archives -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Galleries</h4>
+          <ul class="footer-list">
+            <li><a href="#gallery-section" data-nav-category="nature">Nature &amp; Landscapes</a></li>
+            <li><a href="#gallery-section" data-nav-category="travel">World Travel</a></li>
+            <li><a href="#gallery-section" data-nav-category="architecture">Modern Architecture</a></li>
+            <li><a href="#gallery-section" data-nav-category="people">Portraits &amp; People</a></li>
+            <li><a href="#gallery-section" data-nav-category="favorites">Saved Favorites</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Platform Features -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Features</h4>
+          <ul class="footer-list">
+            <li><a href="#gallery-section" onclick="document.getElementById('start-slideshow-btn').click();">Fullscreen Cinema Mode</a></li>
+            <li><a href="#spotlight-section">EXIF Metadata Inspector</a></li>
+            <li><a href="#gallery-section">Color Harmony Palettes</a></li>
+            <li><a href="#" onclick="event.preventDefault(); document.getElementById('shortcuts-btn').click();">Keyboard Shortcuts</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Curated Newsletter -->
+        <div class="footer-col footer-connect-col">
+          <h4 class="footer-col-title">Exhibition Dispatch</h4>
+          <p class="footer-newsletter-desc">Receive seasonal curated collections, high-resolution wallpaper sets, and photographer profiles.</p>
+          
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); window.ruyaShowToast('Subscribed to FrameCraft Exhibition Dispatch!');">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Enter your email address" class="newsletter-input" required aria-label="Subscribe to FrameCraft newsletter">
+              <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="copyright-year">2026</span> FrameCraft &bull; Curated Fine Art Photography Archive
+        </p>
+        <div class="footer-legal-links">
+          <a href="#hero-section">Back to Top</a>
+          <a href="#gallery-section">All Photographs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Application Engine -->
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "FrameCraft - Curated Photography Archive & Gallery",
+  "description": "A refined, high-resolution photographic archive and exhibition platform featuring lossless 4K visuals, comprehensive EXIF metadata inspection, interactive lightbox, category filters, and cinema slideshow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
