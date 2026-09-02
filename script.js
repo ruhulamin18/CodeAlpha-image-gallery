@@ -618,6 +618,8 @@ const DOM = {
   countPeople: document.getElementById("count-people"),
   countFavorites: document.getElementById("count-favorites"),
   navFavCount: document.getElementById("nav-fav-count"),
+  mainNav: document.getElementById("main-nav"),
+  mobileMenuToggle: document.getElementById("mobile-menu-toggle"),
   
   // Search & tags
   searchInput: document.getElementById("gallery-search-input"),
@@ -1315,6 +1317,15 @@ function shareCurrentImage() {
    12. Keyboard Navigation, Gestures & Global Events
    ========================================================================== */
 function setupEventListeners() {
+  if (DOM.mobileMenuToggle && DOM.mainNav) {
+    DOM.mobileMenuToggle.addEventListener("click", () => {
+      const isOpen = DOM.mainNav.classList.toggle("is-open");
+      DOM.mobileMenuToggle.classList.toggle("is-open", isOpen);
+      DOM.mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+      DOM.mobileMenuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+  }
+
   // Shortcuts Modal
   if (DOM.shortcutsBtn && DOM.shortcutsModal) {
     DOM.shortcutsBtn.addEventListener("click", () => {
@@ -1473,6 +1484,12 @@ function setupEventListeners() {
   document.querySelectorAll("[data-nav-category]").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
+      if (DOM.mobileMenuToggle && DOM.mainNav) {
+        DOM.mainNav.classList.remove("is-open");
+        DOM.mobileMenuToggle.classList.remove("is-open");
+        DOM.mobileMenuToggle.setAttribute("aria-expanded", "false");
+        DOM.mobileMenuToggle.setAttribute("aria-label", "Open navigation menu");
+      }
       const targetCat = link.getAttribute("data-nav-category");
       const targetBtn = document.getElementById(`filter-${targetCat}`);
       if (targetBtn) targetBtn.click();

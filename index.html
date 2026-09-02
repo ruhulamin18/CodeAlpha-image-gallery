@@ -64,6 +64,12 @@
         </ul>
       </nav>
 
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu" aria-controls="main-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <!-- Clean Header Action Essentials -->
       <div class="header-actions">
         <!-- Slideshow trigger button -->
@@ -158,7 +164,7 @@
           <!-- Photographic Archive Stats Bar -->
           <div class="fc-hero-metrics">
             <div class="metric-item">
-              <span class="metric-val" id="stat-total-count">20</span>
+              <span class="metric-val" id="stat-total-count">140</span>
               <span class="metric-lbl">Curated Shots</span>
             </div>
             <div class="metric-divider"></div>
@@ -227,24 +233,83 @@
       </div>
 
       <div class="fc-wave-divider" aria-hidden="true">
-        <svg class="hero-curve-svg" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="hero-curve-svg" viewBox="0 0 1440 190" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M0,160
-               C120,190 210,200 310,185
-               C420,170 520,120 650,108
-               C790,95 885,136 980,140
-               C1080,145 1170,100 1265,82
-               C1330,70 1388,58 1440,42
-               L1440,220 L0,220 Z"
-            fill="#f4f4f5"
+            d="M0,118
+               C155,164 286,169 420,136
+               C566,100 674,72 818,83
+               C955,94 1047,130 1168,100
+               C1262,77 1354,46 1440,34
+               L1440,190 L0,190 Z"
+            fill="#FFFFFF"
           />
         </svg>
+      </div>
+    </section>
+
+    <!-- Featured Editorial Collections -->
+    <section class="featured-section" aria-labelledby="featured-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <span class="section-kicker">Editor's Selection</span>
+          <h2 id="featured-title">Featured Collections</h2>
+          <p>Curated moments worth experiencing.</p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="featured-card" onclick="document.getElementById('gallery-card-1')?.click();">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1100&q=85" alt="Alpine Silence">
+            <div class="featured-overlay">
+              <span class="featured-badge">Nature</span>
+              <button class="featured-favorite" aria-label="Open Alpine Silence">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+              <div>
+                <h3>Alpine Silence</h3>
+                <p>Zermatt, Switzerland</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card" onclick="document.getElementById('gallery-card-2')?.click();">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1100&q=85" alt="Kyoto After Rain">
+            <div class="featured-overlay">
+              <span class="featured-badge">Architecture</span>
+              <button class="featured-favorite" aria-label="Open Kyoto After Rain">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+              <div>
+                <h3>Kyoto After Rain</h3>
+                <p>Kyoto, Japan</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card" onclick="document.getElementById('gallery-card-5')?.click();">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1100&q=85" alt="Coastal Dreams">
+            <div class="featured-overlay">
+              <span class="featured-badge">Travel</span>
+              <button class="featured-favorite" aria-label="Open Coastal Dreams">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+              <div>
+                <h3>Coastal Dreams</h3>
+                <p>Banff / Coastal region</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Category Filter Ribbon & Gallery Controls -->
     <section class="controls-section" id="gallery-section">
       <div class="controls-container">
+        <div class="archive-heading">
+          <span class="section-kicker">Archive</span>
+          <h2>Explore the Archive</h2>
+          <p>Discover photographs from around the world.</p>
+        </div>
         
         <!-- Primary Category Tabs -->
         <div class="filter-tabs-wrapper">
@@ -348,7 +413,7 @@
         <div class="gallery-status-bar" id="gallery-status-bar">
           <p class="status-text">
             <span class="status-indicator"></span>
-            Displaying <strong id="visible-count-display">20</strong> photographs &bull; <span id="current-category-name">All Works</span>
+            Displaying <strong id="visible-count-display">140</strong> photographs &bull; <span id="current-category-name">All Works</span>
           </p>
         </div>
 
@@ -371,6 +436,20 @@
           <button class="btn btn-secondary" id="reset-filter-btn">Reset All Filters</button>
         </div>
 
+      </div>
+    </section>
+
+    <section class="editorial-story-section" aria-labelledby="editorial-story-title">
+      <div class="section-shell editorial-story-grid">
+        <div class="editorial-story-image">
+          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=85" alt="Photographer framing a landscape story">
+        </div>
+        <div class="editorial-story-copy">
+          <span class="section-kicker">About FrameCraft</span>
+          <h2 id="editorial-story-title">More Than Photographs.<br>Stories Captured in a Single Frame.</h2>
+          <p>FrameCraft is a curated visual archive created for photographers, explorers, and visual storytellers.</p>
+          <a href="#spotlight-section" class="fc-about-link">Discover Our Story <span aria-hidden="true">-&gt;</span></a>
+        </div>
       </div>
     </section>
 
@@ -487,6 +566,14 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <section class="final-cta-section" aria-labelledby="final-cta-title">
+      <div class="final-cta-inner">
+        <h2 id="final-cta-title">Your Next Favorite Frame Is Waiting.</h2>
+        <p>Explore curated photography and discover stories worth remembering.</p>
+        <a href="#gallery-section" class="final-cta-btn">Explore Gallery <span aria-hidden="true">-&gt;</span></a>
       </div>
     </section>
   </main>
